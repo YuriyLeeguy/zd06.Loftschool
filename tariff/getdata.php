@@ -1,11 +1,11 @@
 <?php
-class getData implements priceInterface
+
+class getData
 {
     protected $km;
     protected $minutes;
     protected $age;
     protected $addService;
-    protected $result;
 
     public function __construct($km, $minutes, $age, $addService)
     {
@@ -14,11 +14,20 @@ class getData implements priceInterface
         $this->age = $age;
         $this->addService = $addService;
     }
-
-    public function price()
+     public function ageGet()
     {
-        $priceKm = 10;
-        $priceMinute = 3;
-        $this->result = $this->km * $priceKm + $this->minutes * $priceMinute;
+        $maxAge = 65;
+        $middleAge = 21;
+        $minAge = 18;
+        if ($this->age > $maxAge or $minAge > $this->age) {
+            $this->coefficientAge = "Возраст не подходит";
+        } elseif ($this->age >= $minAge and $this->age <= $middleAge) {
+             $this->coefficientAge = 1.1;
+        } else {
+             $this->coefficientAge = 1;
+        }
+        return $this->coefficientAge;
     }
 }
+
+
