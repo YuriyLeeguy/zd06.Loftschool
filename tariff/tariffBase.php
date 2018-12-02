@@ -4,19 +4,19 @@ class tariffBase extends ageController implements tariffInterface
 {
     use addService;
 
-//    protected $km;
-//    protected $minutes;
-//    protected $age;
-//    protected $addService;
-//
-//    public function __construct($km, $minutes, $age, $addService = false)
-//    {
-//        $this->km = $km;
-//        $this->minutes = $minutes;
-//
-//        $this->age = $age;
-//        $this->addService = $addService;
-//    }
+    protected $km;
+    protected $minutes;
+    protected $age;
+    protected $addService;
+
+    public function __construct($km, $minutes, $age, $addService = false)
+    {
+        $this->km = $km;
+        $this->minutes = $minutes;
+
+        $this->age = $age;
+        $this->addService = $addService;
+    }
 
 
     public function tariff()

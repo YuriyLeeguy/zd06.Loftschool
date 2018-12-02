@@ -5,6 +5,7 @@ require "../traits/addService.php";
 require "../tariff/tariffBase.php";
 require "../tariff/tariffDay.php";
 require "../tariff/tariffHour.php";
+require "../tariff/tariffStudent.php";
 
 class controller
 {
