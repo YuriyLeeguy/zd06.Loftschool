@@ -37,6 +37,3 @@ class tariffDay extends ageController
         return bcdiv($day - round($day), 1, 3);
     }
 }
-
-//$temp = new tariffDay(1,1440+30, 18);
-//echo $temp->tariffDay();

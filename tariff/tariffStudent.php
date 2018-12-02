@@ -21,6 +21,3 @@ class tariffStudent extends ageController
         return $view;
     }
 }
-
-//$temp = new tariffStudent(5, 60, 21);
-//echo $temp->tariffStudent();

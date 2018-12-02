@@ -21,5 +21,3 @@ class tariffBase extends ageController
         return $view;
     }
 }
-
-
