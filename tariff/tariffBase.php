@@ -1,27 +1,25 @@
 <?php
-require "../Controler/ageControler.php";
-require "../traits/addService.php";
 
-
-class tariffBase extends ageController
+class tariffBase extends ageController implements tariffInterface
 {
     use addService;
 
-    protected $km;
-    protected $minutes;
-    protected $age;
-    protected $addService;
+//    protected $km;
+//    protected $minutes;
+//    protected $age;
+//    protected $addService;
+//
+//    public function __construct($km, $minutes, $age, $addService = false)
+//    {
+//        $this->km = $km;
+//        $this->minutes = $minutes;
+//
+//        $this->age = $age;
+//        $this->addService = $addService;
+//    }
 
-    public function __construct($km, $minutes, $age, $addService = false)
-    {
-        $this->km = $km;
-        $this->minutes = $minutes;
-        $this->age = $age;
-        $this->addService = $addService;
-    }
 
-
-    public function tariffBase()
+    public function tariff()
     {
         define('PRICEKM', 10);
         define('PRICEMINUTE', 3);
@@ -39,5 +37,4 @@ class tariffBase extends ageController
     }
 }
 
-$temp = new tariffBase(5, 60, 25);
-echo $temp->tariffBase();
+

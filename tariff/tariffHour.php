@@ -1,8 +1,6 @@
 <?php
-require "../Controler/ageControler.php";
-require "../traits/addService.php";
 
-class tariffHour extends ageController
+class tariffHour extends ageController implements tariffInterface
 {
     use addService;
 
@@ -16,7 +14,7 @@ class tariffHour extends ageController
         $this->age = $age;
         $this->addService = $addService;
     }
-    public function tariffHour()
+    public function tariff()
     {
         define('PRICEHOUR', 200);
 
@@ -32,5 +30,5 @@ class tariffHour extends ageController
         return $view;
     }
 }
-$temp = new tariffHour(120,26);
-echo $temp->tariffHour();
+//$temp = new tariffHour(60,25);
+//echo $temp->tariffHour();

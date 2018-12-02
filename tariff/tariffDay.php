@@ -1,8 +1,6 @@
 <?php
-require "../Controler/ageControler.php";
-require "../traits/addService.php";
 
-class tariffDay extends ageController
+class tariffDay extends ageController implements tariffInterface
 {
     use addService;
 
@@ -19,7 +17,7 @@ class tariffDay extends ageController
         $this->km = $km;
     }
 
-    public function tariffDay()
+    public function tariff()
     {
         define('MINTIME', 0.020);
         define('PRICEKM', 1);
@@ -53,5 +51,5 @@ class tariffDay extends ageController
     }
 }
 
-$temp = new tariffDay(1,1440+30, 18);
-echo $temp->tariffDay();
+//$temp = new tariffDay(1,1440+30, 18);
+//echo $temp->tariffDay();
