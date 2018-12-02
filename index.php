@@ -6,5 +6,5 @@ require "./tariff/tariffDay.php";
 require "./tariff/tariffHour.php";
 require "./tariff/tariffStudent.php";
 
-$result = new tariffHour(10,60, true);
+$result = new tariffStudent(10,121,18, true);
 echo $result->tariff();
