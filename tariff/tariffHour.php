@@ -1,18 +1,12 @@
 <?php
 
-class tariffHour extends ageController implements tariffInterface
+class tariffHour extends ageController
 {
     use addService;
 
-    protected $minutes;
-    protected $age;
-    protected $addService;
-
     public function __construct($minutes, $age, $addService = false)
     {
-        $this->minutes = $minutes;
-        $this->age = $age;
-        $this->addService = $addService;
+     parent::__construct(null,$minutes, $age,$addService);
     }
     public function tariff()
     {
@@ -30,5 +24,3 @@ class tariffHour extends ageController implements tariffInterface
         return $view;
     }
 }
-//$temp = new tariffHour(60,25);
-//echo $temp->tariffHour();

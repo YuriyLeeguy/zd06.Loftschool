@@ -1,21 +1,8 @@
 <?php
 
-class tariffDay extends ageController implements tariffInterface
+class tariffDay extends ageController
 {
     use addService;
-
-    protected $minutes;
-    protected $age;
-    protected $addService;
-    protected $km;
-
-    public function __construct($km, $minutes, $age, $addService = false)
-    {
-        $this->minutes = $minutes;
-        $this->age = $age;
-        $this->addService = $addService;
-        $this->km = $km;
-    }
 
     public function tariff()
     {

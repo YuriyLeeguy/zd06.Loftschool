@@ -7,17 +7,5 @@ require "../tariff/tariffDay.php";
 require "../tariff/tariffHour.php";
 require "../tariff/tariffStudent.php";
 
-class controller
-{
-    public function run($tariffType){
-
-        $tariff = new $tariffType(60,20);
-        echo $tariff->tariff();
-    }
-}
-
-$result = new controller();
-$result->run(tariffHour::class);
-
-//$temp = new tariffBase(5, 60, 25);
-//echo $temp->tariffBase();
+$result = new tariffHour(10,60, true);
+echo $result->tariff();
