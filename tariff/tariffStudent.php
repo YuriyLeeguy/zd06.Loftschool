@@ -25,7 +25,6 @@ class tariffStudent extends ageController
         define('PRICEMINUTE', 1);
 
         $getAge = ageController::setAgeStudent($this->age);
-
         $getService = $this->setServiceForStudent($this->minutes, $this->addService);
 
         if (empty($getAge)) {

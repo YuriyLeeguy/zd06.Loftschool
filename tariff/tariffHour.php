@@ -21,7 +21,6 @@ class tariffHour extends ageController
         define('PRICEHOUR', 200);
 
         $getAge = ageController::setAge($this->age);
-
         $getService = $this->setService($this->minutes, $this->addService);
 
         if (intval($getAge)){

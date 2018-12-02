@@ -1,6 +1,5 @@
 <?php
 
-
 trait addService
 {
     public function setService($minutes, $addService)

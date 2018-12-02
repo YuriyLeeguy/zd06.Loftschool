@@ -1,10 +1,10 @@
 <?php
-require "../zd06.Loftschool/tariff/getdata.php";
-require "../zd06.Loftschool/tariff/tariffBase.php";
+
+//require "./Controler/ageControler.php";
+//require "./tariff/tariffBase.php";
+//require "./traits/addService.php";
 
 
-$tmp = new tariffBase(10,1440,25,1);
+$tmp = new tariffBase(10,1440,25,true);
+echo $temp->tariffBase();
 
-echo '<PRE>';
-print_r($tmp);
-die();

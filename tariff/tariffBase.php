@@ -2,6 +2,7 @@
 require "../Controler/ageControler.php";
 require "../traits/addService.php";
 
+
 class tariffBase extends ageController
 {
     use addService;
@@ -19,13 +20,13 @@ class tariffBase extends ageController
         $this->addService = $addService;
     }
 
+
     public function tariffBase()
     {
         define('PRICEKM', 10);
         define('PRICEMINUTE', 3);
 
-        $getAge = ageController::setAge($this->age);
-
+        $getAge = $this->setAge($this->age);
         $getService = $this->setService($this->minutes, $this->addService);
 
         if (intval($getAge)) {

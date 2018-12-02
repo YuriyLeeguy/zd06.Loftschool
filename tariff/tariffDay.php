@@ -26,10 +26,10 @@ class tariffDay extends ageController
         define('PRICEDAY', 1000);
 
         $getAge = ageController::setAge($this->age);
-
         $getService = $this->setService($this->minutes, $this->addService);
 
         $checkTime = $this->checkTimeForDay();
+
         $day = $this->minutes / 1440;
 
         if (intval($getAge)) {
