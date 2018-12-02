@@ -1,5 +1,4 @@
 <?php
-require "../tariff/tariffInterface.php";
 require "../Controler/ageControler.php";
 require "../traits/addService.php";
 require "../tariff/tariffBase.php";
